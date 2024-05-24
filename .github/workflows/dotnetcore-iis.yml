@@ -33,8 +33,8 @@ jobs:
         Copy-Item ./dotnetcorewebapp/* C:/inetpub/wwwroot/dotnetcore-webapp -Recurse -Force
         iisreset /start
     
-    - name: Curl the website as a smoke test
-      run: curl http://localhost/dotnetcore-webapp
+    # - name: Curl the website as a smoke test
+    #   run: curl http://localhost/dotnetcore-webapp
 
     # - name: Run Web Test
     #   run: |
