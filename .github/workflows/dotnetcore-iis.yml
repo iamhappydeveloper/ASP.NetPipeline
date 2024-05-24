@@ -21,11 +21,11 @@ jobs:
     
     # dotnet build and publish
     - name: Build with dotnet
-      run: dotnet build --configuration Release .\dotnet-core-webapp
+      run: dotnet build --configuration Release .\WebApplicationTestPipeline
 
     - name: dotnet publish 
       run: |
-        dotnet publish -c Release -o dotnetcorewebapp .\dotnet-core-webapp
+        dotnet publish -c Release -o dotnetcorewebapp .\WebApplicationTestPipeline
 
     - name: Deploy to IIS
       run: |
@@ -38,6 +38,6 @@ jobs:
 
     # - name: Run Web Test
     #   run: |
-    #     dotnet build --configuration Release .\dotnet-core-webapp.webtest
-    #     cd .\dotnet-core-webapp.webtests
+    #     dotnet build --configuration Release .\WebApplicationTestPipeline.webtest
+    #     cd .\WebApplicationTestPipeline.webtests
     #     dotnet test
